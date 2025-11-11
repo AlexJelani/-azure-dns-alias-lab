@@ -1,0 +1,25 @@
+{
+  "name": "Azure DNS Lab",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/terraform:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/azure-cli:1": {
+      "version": "latest"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "HashiCorp.terraform",
+        "ms-vscode.azure-account",
+        "ms-azuretools.vscode-azureresourcegroups",
+        "AmazonWebServices.aws-toolkit-vscode",
+        "GitHub.copilot"
+      ]
+    }
+  },
+  "postCreateCommand": "bash .devcontainer/setup.sh",
+  "remoteUser": "codespace"
+}
